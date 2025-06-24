@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gustavo & Kaylane 💖</title>
+  <style>
+    :root {
+      --vermelho: #d62828;
+      --rosa: #ffc8dd;
+      --texto: #2b2b2b;
+      --bordaroxa: #9d4edd;
+      --azul-aranha: #1e3a8a;
+      --rosa-kitty: #ff69b4;
+      --misto: linear-gradient(45deg, #d62828, #ff69b4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-image: url("back do miranha.jpeg"), url("hello kitty.jpeg");
+      background-position: left, right;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 50% 100%, 50% 100%;
+      background-attachment: fixed;
+      color: var(--texto);
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: var(--vermelho);
+      margin-bottom: 0.2em;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+      color: #5a189a;
+    }
+
+    .card {
+      background-color: white;
+      border: 3px solid var(--bordaroxa);
+      border-radius: 15px;
+      padding: 1.5em;
+      max-width: 500px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2em;
+      z-index: 1;
+    }
+
+    .spiderman {
+      border: 3px solid var(--azul-aranha);
+    }
+
+    .hellokitty {
+      border: 3px solid var(--rosa-kitty);
+    }
+
+    .mix {
+      border: 3px solid;
+      border-image: var(--misto) 1;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+
+    .message {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .counter {
+      background: #ffe5ec;
+      border: 2px dashed var(--vermelho);
+      padding: 1em;
+      border-radius: 10px;
+      margin: 2em auto;
+      font-weight: bold;
+      max-width: 500px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .player-box {
+      background: #fff0f5;
+      padding: 1em;
+      border-radius: 15px;
+      border: 2px dashed var(--bordaroxa);
+      max-width: 500px;
+      margin: 2em 0;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+      z-index: 1;
+    }
+
+    .icons img {
+      height: 100px;
+      width: auto;
+    }
+
+    .heart {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .heart span {
+      position: absolute;
+      display: block;
+      color: pink;
+      animation: float 10s linear infinite;
+      font-size: 2em;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      .message { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart">
+    <span style="left:5%">💖</span>
+    <span style="left:10%">💘</span>
+    <span style="left:15%">❤</span>
+    <span style="left:20%">💕</span>
+    <span style="left:25%">💓</span>
+    <span style="left:30%">💗</span>
+    <span style="left:35%">💞</span>
+    <span style="left:40%">💝</span>
+    <span style="left:45%">❣</span>
+    <span style="left:50%">💖</span>
+    <span style="left:55%">💘</span>
+    <span style="left:60%">❤</span>
+    <span style="left:65%">💕</span>
+    <span style="left:70%">💓</span>
+    <span style="left:75%">💗</span>
+    <span style="left:80%">💞</span>
+    <span style="left:85%">💝</span>
+    <span style="left:90%">❣</span>
+    <span style="left:95%">💘</span>
+  </div>
+
+  <h1>Gustavo & Kaylane 💖</h1>
+  <p class="subtitle">Nosso cantinho encantado 🕷🎀</p>
+
+  <div class="player-box">
+    🎵 <strong>Player de Música</strong>: "Patience" – Guns N' Roses (vai tocar no backend 😉)
+  </div>
+
+  <div class="counter" id="relationshipTime">Carregando o tempo juntos... 💞</div>
+
+  <div class="card spiderman">
+    <img src="minha.jpg" alt="Gustavo">
+    <div class="message">
+      Eu, Gustavo 😎, um mero mortal apaixonado por essa deusa aqui ó 👇💘
+    </div>
+  </div>
+
+  <div class="card hellokitty">
+    <img src="kay.jpg" alt="Kaylane">
+    <div class="message">
+      Minha namorada Kaylane Keltyn 💗, simplesmente a menina mais linda desse mundo , inteligente 🧠, carismática 😄, engraçada , e gostosa tbm né 🔥. Enfim, eu amo muito você meu amor. Me desculpe, estrelas ✨, mas vocês não têm nem metade do brilho dela! 💫 Te amo! 
+    </div>
+  </div>
+
+  <div class="card mix">
+    <img src="nossa.jpg" alt="Foto do casal">
+    <div class="message">
+      Agradeço a Deus por ter colocado você no meu caminho. 🙏❤ Nosso namoro é uma bênção e meu coração já sonha com o nosso casamento 👰🤵. Que seja eterno, leve, divertido e cheio de amor. Te amo, meu amor! 💒💘
+    </div>
+  </div>
+
+  <div class="icons">
+    <img src="miranha.jpg" alt="Homem-Aranha">
+    <img src="kitty.jpg" alt="Hello Kitty">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const startDate = new Date("2025-05-05T00:00:00").getTime();
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        const distance = now - startDate;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("relationshipTime").innerHTML =
+          `Estamos juntos há <strong>${days}</strong> dias, <strong>${hours}</strong> horas, <strong>${minutes}</strong> minutos e <strong>${seconds}</strong> segundos 💞`;
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    });
+  </script>
+</body>
+</html>
