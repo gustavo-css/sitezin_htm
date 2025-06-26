@@ -187,7 +187,11 @@
   <p class="subtitle">Nosso sitezin amor ! 🕷🎀</p>
 
   <div class="player-box">
-    🎵 <strong>Player de Música</strong>: "Patience" – Guns N' Roses (vai tocar no backend 😉)
+    🎵 <strong>Player de Música</strong>: "Patience" – Guns N' Roses<br><br>
+    <audio id="player" controls autoplay>
+      <source src="patience.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
   </div>
 
   <div class="counter" id="relationshipTime">Carregando o tempo juntos... 💞</div>
@@ -200,7 +204,7 @@
   </div>
 
   <div class="card hellokitty">
-    <img src="kay.jpg" alt="Kaylane">
+    <img src="kay.jpg" alt="Kaylane" id="kaylaneFoto">
     <div class="message">
       Minha namorada Kaylane Keltyn 💗, simplesmente a menina mais linda desse mundo , inteligente 🧠, carismática 😄, engraçada , e gostosa tbm né 🔥. Enfim, eu amo muito você meu amor. Me desculpe, estrelas ✨, mas vocês não têm nem metade do brilho dela! 💫 Te amo! 
     </div>
@@ -237,6 +241,25 @@
 
       updateTimer();
       setInterval(updateTimer, 1000);
+
+      const audio = document.getElementById("player");
+      if (audio) {
+        document.addEventListener("click", function () {
+          if (audio.paused) audio.play();
+        }, { once: true });
+      }
+
+      // Easter egg: clique 7x na foto dela
+      let clickCount = 0;
+      const fotoKay = document.getElementById("kaylaneFoto");
+      if (fotoKay) {
+        fotoKay.addEventListener("click", () => {
+          clickCount++;
+          if (clickCount === 7) {
+            alert("Que mulher perfeita, toda lindona e gostosona mds 😍\nEu te amo meu amor muito muito muito viu? 💖💖💖");
+          }
+        });
+      }
     });
   </script>
 </body>
