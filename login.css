@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("lg.jpg") center center/cover no-repeat;
+  transform: translate(-50%, -50%);
+  filter: blur(5px); /* Blur ainda menor pra deixar a imagem mais clara */
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(157, 78, 221, 0.15); /* Overlay roxo mais clarinho */
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+.login-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 3em 2.5em;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(214, 40, 40, 0.4);
+  width: 350px;
+  max-width: 90vw;
+  text-align: center;
+  z-index: 10;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.login-container h1 {
+  margin-bottom: 1.5em;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 8px #59006e;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.8em 1em;
+  margin-bottom: 1.2em;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+.login-box input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 10px 3px #9d4edd;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.9em 1em;
+  background: #9d4edd;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px #7a38bb;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-box button:hover {
+  background: #6a0dad;
+  transform: scale(1.05);
+}
+
+.warning {
+  margin-top: 1.2em;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #ffcbd6;
+  text-shadow: 1px 1px 3px #59006e;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    width: 90%;
+    padding: 2em 1.5em;
+  }
+}

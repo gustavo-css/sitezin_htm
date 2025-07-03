@@ -1,190 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gustavo & Kaylane 💖</title>
-  <style>
-    :root {
-      --vermelho: #d62828;
-      --rosa: #ffc8dd;
-      --texto: #2b2b2b;
-      --bordaroxa: #9d4edd;
-      --azul-aranha: #1e3a8a;
-      --rosa-kitty: #ff69b4;
-      --misto: linear-gradient(45deg, #d62828, #ff69b4);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background-image: url("back do miranha.jpeg"), url("hello kitty.jpeg");
-      background-position: left, right;
-      background-repeat: no-repeat, no-repeat;
-      background-size: 50% 100%, 50% 100%;
-      background-attachment: fixed;
-      color: var(--texto);
-      padding: 2em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-
-    h1 {
-      font-size: 3em;
-      color: var(--vermelho);
-      margin-bottom: 0.2em;
-    }
-
-    .subtitle {
-      font-size: 1.2em;
-      margin-bottom: 2em;
-      color: #5a189a;
-    }
-
-    .card {
-      background-color: white;
-      border: 3px solid var(--bordaroxa);
-      border-radius: 15px;
-      padding: 1.5em;
-      max-width: 500px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2em;
-      z-index: 1;
-    }
-
-    .spiderman {
-      border: 3px solid var(--azul-aranha);
-    }
-
-    .hellokitty {
-      border: 3px solid var(--rosa-kitty);
-    }
-
-    .mix {
-      border: 3px solid;
-      border-image: var(--misto) 1;
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 1em;
-    }
-
-    .message {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
-    .counter {
-      background: #ffe5ec;
-      border: 2px dashed var(--vermelho);
-      padding: 1em;
-      border-radius: 10px;
-      margin: 2em auto;
-      font-weight: bold;
-      max-width: 500px;
-      text-align: center;
-      z-index: 1;
-    }
-
-    .player-box {
-      background: #fff0f5;
-      padding: 1em;
-      border-radius: 15px;
-      border: 2px dashed var(--bordaroxa);
-      max-width: 500px;
-      margin: 2em 0;
-      text-align: center;
-      z-index: 1;
-    }
-
-    .icons {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      margin-top: 2em;
-      z-index: 1;
-    }
-
-    .icons img {
-      height: 100px;
-      width: auto;
-    }
-
-    .heart {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .heart span {
-      position: absolute;
-      display: block;
-      color: pink;
-      animation: float 10s linear infinite;
-      font-size: 2em;
-      opacity: 0.7;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-10vh) scale(1);
-        opacity: 0;
-      }
-    }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2em; }
-      .message { font-size: 1em; }
-    }
-  </style>
+  <link rel="stylesheet" href="estilo.css"/>
 </head>
 <body>
   <div class="heart">
     <span style="left:5%">💖</span>
-    <span style="left:10%">💘</span>
-    <span style="left:15%">❤</span>
-    <span style="left:20%">💕</span>
-    <span style="left:25%">💓</span>
-    <span style="left:30%">💗</span>
-    <span style="left:35%">💞</span>
-    <span style="left:40%">💝</span>
-    <span style="left:45%">❣</span>
-    <span style="left:50%">💖</span>
-    <span style="left:55%">💘</span>
-    <span style="left:60%">❤</span>
-    <span style="left:65%">💕</span>
-    <span style="left:70%">💓</span>
-    <span style="left:75%">💗</span>
-    <span style="left:80%">💞</span>
-    <span style="left:85%">💝</span>
-    <span style="left:90%">❣</span>
-    <span style="left:95%">💘</span>
+    <span style="left:15%">💘</span>
+    <span style="left:25%">💕</span>
+    <span style="left:35%">💓</span>
+    <span style="left:45%">💗</span>
+    <span style="left:55%">💞</span>
+    <span style="left:65%">💝</span>
+    <span style="left:75%">❣</span>
+    <span style="left:85%">💘</span>
   </div>
 
   <h1>Gustavo & Kaylane 💖</h1>
-  <p class="subtitle">Nosso sitezin amor ! 🕷🎀</p>
+  <p class="subtitle">Nosso sitezin amor! 🕷🎀</p>
 
   <div class="player-box">
     🎵 <strong>Player de Música</strong>: "Patience" – Guns N' Roses<br><br>
@@ -196,24 +32,35 @@
 
   <div class="counter" id="relationshipTime">Carregando o tempo juntos... 💞</div>
 
-  <div class="card spiderman">
-    <img src="minha.jpg" alt="Gustavo">
-    <div class="message">
-      Eu, Gustavo 😎, um mero mortal apaixonado por essa deusa aqui ó 👇💘
+  <!-- Carrossel de cards -->
+  <div class="carousel">
+    <div class="carousel-card active" data-index="0">
+      <img src="minha.jpg" alt="Gustavo">
+      <div class="message animated" id="msg-gustavo">
+        Eu, Gustavo 😎, um mero mortal apaixonado por essa deusa aqui ó 👇💘
+      </div>
+      <button class="edit-button" onclick="abrirEditor('msg-gustavo')">Editar Mensagem ✍️</button>
     </div>
-  </div>
 
-  <div class="card hellokitty">
-    <img src="kay.jpg" alt="Kaylane" id="kaylaneFoto">
-    <div class="message">
-      Minha namorada Kaylane Keltyn 💗, simplesmente a menina mais linda desse mundo , inteligente 🧠, carismática 😄, engraçada , e gostosa tbm né 🔥. Enfim, eu amo muito você meu amor. Me desculpe, estrelas ✨, mas vocês não têm nem metade do brilho dela! 💫 Te amo! 
+    <div class="carousel-card" data-index="1">
+      <img src="kay.jpg" alt="Kaylane" id="kaylaneFoto">
+      <div class="message animated" id="msg-kaylane">
+        Minha namorada Kaylane Keltyn 💗, a mais linda, inteligente e gostosa do mundo 🔥. Te amo! 💫
+      </div>
+      <button class="edit-button" onclick="abrirEditor('msg-kaylane')">Editar Mensagem ✍️</button>
     </div>
-  </div>
 
-  <div class="card mix">
-    <img src="nossa.jpg" alt="Foto do casal">
-    <div class="message">
-      Agradeço a Deus por ter colocado você no meu caminho. 🙏❤ Nosso namoro é uma bênção e meu coração já sonha com o nosso casamento 👰🤵. Que seja eterno, leve, divertido e cheio de amor. Te amo, meu amor! 💒💘
+    <div class="carousel-card" data-index="2">
+      <img src="nossa.jpg" alt="Casal">
+      <div class="message animated" id="msg-nos">
+        Agradeço a Deus por ter colocado você no meu caminho. 💒 Que nosso amor seja eterno! 💘
+      </div>
+      <button class="edit-button" onclick="abrirEditor('msg-nos')">Editar Mensagem ✍️</button>
+    </div>
+
+    <div class="navigation">
+      <button class="nav-button" onclick="mudarSlide(-1)">⬅️</button>
+      <button class="nav-button" onclick="mudarSlide(1)">➡️</button>
     </div>
   </div>
 
@@ -222,7 +69,19 @@
     <img src="kitty.jpg" alt="Hello Kitty">
   </div>
 
+  <!-- Modal de Edição -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <textarea id="editInput"></textarea>
+      <div class="modal-actions">
+        <button onclick="salvarEdicao()">Salvar</button>
+        <button onclick="fecharModal()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Contador de relacionamento
     document.addEventListener("DOMContentLoaded", function () {
       const startDate = new Date("2025-05-05T00:00:00").getTime();
 
@@ -242,6 +101,7 @@
       updateTimer();
       setInterval(updateTimer, 1000);
 
+      // Autoplay música
       const audio = document.getElementById("player");
       if (audio) {
         document.addEventListener("click", function () {
@@ -249,18 +109,59 @@
         }, { once: true });
       }
 
-      // Easter egg: clique 7x na foto dela
+      // Easter egg
       let clickCount = 0;
       const fotoKay = document.getElementById("kaylaneFoto");
       if (fotoKay) {
         fotoKay.addEventListener("click", () => {
           clickCount++;
           if (clickCount === 7) {
-            alert("Que mulher perfeita, toda lindona e gostosona mds 😍\nEu te amo meu amor muito muito muito viu? 💖💖💖");
+            alert("Que mulher perfeita mds 😍 Eu te amo meu amor! 💖");
           }
         });
       }
     });
+
+    // Carrossel
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".carousel-card");
+
+    function mostrarSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
+      });
+    }
+
+    function mudarSlide(direction) {
+      slideIndex = (slideIndex + direction + slides.length) % slides.length;
+      mostrarSlide(slideIndex);
+    }
+
+    // Modal de edição
+    let mensagemAtualId = null;
+
+    function abrirEditor(id) {
+      mensagemAtualId = id;
+      const texto = document.getElementById(id).innerText;
+      document.getElementById("editInput").value = texto;
+      document.getElementById("modal").classList.add("show");
+    }
+
+    function fecharModal() {
+      document.getElementById("modal").classList.remove("show");
+      mensagemAtualId = null;
+    }
+
+    function salvarEdicao() {
+      const novoTexto = document.getElementById("editInput").value;
+      if (mensagemAtualId && novoTexto.trim()) {
+        document.getElementById(mensagemAtualId).innerText = novoTexto;
+      }
+      fecharModal();
+    }
   </script>
 </body>
 </html>
